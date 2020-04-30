@@ -18,11 +18,8 @@ export class CscService {
     alert("Hi");
    // return this.http.get(`${this.apiBaseUrl}countries/all`).pipe(
     //  catchError(this.handleError)
+      return this.http.get(`${this.apiBaseUrl}countries/all`);
       
-      
-      var countries=this.http.get(`${this.apiBaseUrl}countries/all`);
-      alert(countries);
-      return countries;
     }
  
   
