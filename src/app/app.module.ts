@@ -8,12 +8,11 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
     
   ],
   imports: [
     BrowserModule,
-
     ReactiveFormsModule,
     HttpClientModule
    

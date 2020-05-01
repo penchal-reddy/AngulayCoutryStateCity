@@ -9,7 +9,7 @@ import { CscService } from './csc.service';
 })
 export class AppComponent  implements OnInit{
   createAccountForm: FormGroup;
-  countries: Array<any>;
+  countries:{};
   states: {};
   cities: {};
 
@@ -30,7 +30,7 @@ export class AppComponent  implements OnInit{
       state: new FormControl(''),
       city: new FormControl('')
     });
-    alert(this.countries);
+   // alert(this.countries);
   }
 
   onChangeCountry(countryId: number) {

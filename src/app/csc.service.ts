@@ -14,18 +14,29 @@ export class CscService {
 
   constructor(private http: HttpClient) { }
 
-  getCountries(): Observable<any>  {
-    alert("Hi");
+  getCountries() {
+    ///console.log('About to bind scroll effects');
+    //alert(this.http.get(`https://api.printful.com/countries`));
    // return this.http.get(`${this.apiBaseUrl}countries/all`).pipe(
     //  catchError(this.handleError)
+    //console.log('**********************');
+    //console.log(this.http.get(`https://api.printful.com/countries`));
       return this.http.get(`${this.apiBaseUrl}countries/all`);
       
+
     }
  
-  
+    getCountries1() {
+      return this.http.get(`https://api.printful.com/countries`).pipe(
+        catchError(this.handleError)
+      );
+      
+
+
+    }
 
   getStates(countryId: number) {
-    alert("Hi states");
+   // alert("Hi states");
     return this.http.get(`${this.apiBaseUrl}states/id?byId=${countryId}`).pipe(
       catchError(this.handleError)
     );
